@@ -20,7 +20,9 @@ require 'pry'
      end
 
      def self.new_by_filename(file_name)
-        artist_name, song_name = file_name.split /\s-\s|\./
+        song_info = file_name.split(" - ")
+        artist_name = song_info[0]
+        song_name = song_info[1]
     
         song = Song.new(song_name)
         artist = Artist.find_or_create_by_name(artist_name)

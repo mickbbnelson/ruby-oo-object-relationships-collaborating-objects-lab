@@ -9,7 +9,7 @@ class MP3Importer
     end
 
     def files
-        mp3s = Dir.entries(path)
+        mp3s = Dir.entries(path)        #returns an array of all file names in a directory.
         mp3s.slice(2, mp3s.size)
     end
 
